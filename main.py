@@ -8,6 +8,9 @@ while opcao > 0 :
     opcao = int(input())
 
     if opcao == 1:
+        A = 0
+        B = 0
+
         print("\n--- Escolha o tipo ---\n\n")
         print("1 - Caso 1\nA:= A + B, onde registrador A armazena soma e B fica zerado.\n\n")
         print("2 - Caso 2\nA:= A + B usando C, onde registrador C armazena soma e A e B ficam zerados.\n\n")
@@ -15,6 +18,19 @@ while opcao > 0 :
         print("4 - Voltar para o menu\n")
         opcao = int(input())
 
+        if opcao < 4 or opcao > 0:
+            while A < 0:
+                A = int(input("Inicialize o registrador A: "))
+                if A < 0:
+                    print("Digite um numero positivo.\n")
+
+            while B < 0:
+                B = int(input("Inicialize o registrador B: "))
+                if B < 0:
+                    print("Digite um numero positivo.\n")
+
+            #CHAMADA
+        
     elif opcao == 2:
         print("\n--- Escolha o tipo ---\n\n")
         print("1 - Caso 1\nA:= A * B usando C, D, onde o registrador A armazena o produto, B tem seu valor\nrestaurado, C e D ficam zerados\n\n")
